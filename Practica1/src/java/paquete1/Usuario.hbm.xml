@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-mar-2016 16:02:12 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="paquete1.Usuario" table="usuario" schema="public" optimistic-lock="version">
+        <id name="nidusuario" type="int">
+            <column name="nidusuario" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="40" not-null="true" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" length="128" not-null="true" />
+        </property>
+        <property name="contrase&#195;&#177;a" type="string">
+            <column name="contrase&#195;&#177;a" length="10" not-null="true" />
+        </property>
+        <set name="registrousuarios" table="registrousuario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="nidusuario" not-null="true" />
+            </key>
+            <one-to-many class="paquete1.Registrousuario" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -6,6 +6,6 @@
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
     <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/IngSoft</property>
     <property name="hibernate.connection.username">postgres</property>
-    <property name="hibernate.connection.password">Ciencias23</property>
+    <property name="hibernate.connection.password"></property><!-- Aqui va la contraseña-->
   </session-factory>
 </hibernate-configuration>
