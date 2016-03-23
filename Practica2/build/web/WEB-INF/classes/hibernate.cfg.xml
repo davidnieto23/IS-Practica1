@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.connection.Class.forname">org.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://locahost:5432/IngSoft</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">Ciencias23</property>
+    <!-- Aqui va la contraseña-->
+  </session-factory>
+</hibernate-configuration>
