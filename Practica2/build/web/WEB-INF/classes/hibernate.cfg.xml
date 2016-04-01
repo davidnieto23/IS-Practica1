@@ -8,5 +8,11 @@
     <property name="hibernate.connection.username">postgres</property>
     <property name="hibernate.connection.password">Ciencias23</property>
     <!-- Aqui va la contraseña-->
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <mapping resource="Clases/Registrousuario.hbm.xml"/>
+    <mapping resource="Clases/Usuario.hbm.xml"/>
+  </session-factory>
   </session-factory>
 </hibernate-configuration>

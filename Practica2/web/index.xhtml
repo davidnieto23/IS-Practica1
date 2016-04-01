@@ -5,14 +5,22 @@
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       >
   <h:head>
-    <title>Inicio</title>
+    <title>Facelet Title</title>
     <link rel="stylesheet" href="cssFormulario.css"/>
   </h:head>
   <h:body>
+    <section class="contenedorLogin">
       <h:form class="formulario">
-        <h:commandButton value="Registrarse" action="signUp"  />
-        <h:commandButton value="Iniciar Sesion" action="logIn"  />
+        <h2>Acceso de Usuario</h2>
+        <p>Rellene el siguiente formulario para ingresar al sistema</p>
+        <p><h:inputText pt:placeholder="Usuario" value="#{login.usuario}" /></p>
+        <p><h:inputSecret pt:placeholder="Contraseña" value="#{login.contrasena}" /></p>
+        <h:messages infoStyle="color: blue;list-style:none;" errorStyle="color:red;list-style:none;"/>
+        <section class="seccionBotones">
+          <a href="#">Regístrate</a>
+          <h:commandButton value="Ingresar" action="#{login.login()}"  />
+        </section>
       </h:form>
-  
+    </section>
   </h:body>
 </html>
